@@ -26,6 +26,15 @@ module.exports = function (app) {
     // it is important static middleware is defined after router
     app.use('/public/', express.static(path.join(__dirname, '../public')));
 
+    // configuration of handlebars
+    app.engine('handlebars', exphbs.create({
+        defaultLayout: 'main',
+        layoutDir: app.get('views') + '/layouts',
+        partialsDir: [app.get('views') + '/partials']
+    }).engine);
+
+    app.set('view engine', 'handlebars');
+
     if ('development' === app.get('env')) {
         app.use(errorHandler());
     }
