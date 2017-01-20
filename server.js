@@ -2,7 +2,7 @@
  * Created by thiagoretondar on 19/01/17.
  */
 var express = require('express'),
-    config = require('./configure'),
+    config = require('./server/configure'),
     app = express();
 
 // get from env or user 3300 as default
