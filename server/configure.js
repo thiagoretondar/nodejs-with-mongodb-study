@@ -19,6 +19,7 @@ module.exports = function (app) {
     app.use(multer({ dest: path.join(__dirname, 'public/upload/temp')}).single('file'));
 
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
     app.use(methodOverride());
     app.use(cookieParser('some-secret-value-here'));
 
