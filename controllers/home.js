@@ -1,8 +1,7 @@
 /**
  * Created by thiagoretondar on 19/01/17.
  */
-var sidebar = require('../helpers/sidebar'),
-    ImageModel = require('../models').Image;
+var ImageModel = require('../models').Image;
 
 module.exports = {
     index: function (req, res) {
@@ -13,11 +12,10 @@ module.exports = {
 
         ImageModel.find({}, {}, {sort: {timestamp: -1}}, function(err, images) {
             viewModel.images = images;
-            console.log(viewModel.images);
 
-            sidebar(viewModel, function (viewModel) {
-                res.render('index', viewModel);
-            });
+            // sidebar(viewModel, function (viewModel) {
+            //     res.render('index', viewModel);
+            // });
         });
     }
 };
