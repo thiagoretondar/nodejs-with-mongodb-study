@@ -32,6 +32,7 @@
     "multer": "^1.2.1"
   },
   "devDependencies": {
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0"
   }
 }
