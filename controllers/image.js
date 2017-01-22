@@ -141,6 +141,7 @@ module.exports = {
         );
     },
     remove: function(req, res) {
+        Models.Image.findByIdAndRemove
         Models.Image.findOne({ filename: { $regex: req.params.image_id } },
             function(err, image) {
                 if (err) { throw err; }
