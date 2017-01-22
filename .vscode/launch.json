@@ -8,7 +8,9 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/server.js",
+            "program": "${workspaceRoot}/node_modules/nodemon/bin/nodemon.js",
+            "stopOnEntry": false,
+            "args": ["${workspaceRoot}/server.js"],
             "cwd": "${workspaceRoot}"
         },
         {
