@@ -7,7 +7,7 @@ var express = require('express'),
 var home = require('../controllers/home'),
     image = require('../controllers/image');
 
-module.exports = function (app) {
+module.exports.initialize = function (app) {
 
     // HOME
     router.get('/', home.index);

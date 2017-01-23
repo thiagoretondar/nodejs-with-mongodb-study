@@ -24,7 +24,7 @@ module.exports = function (app) {
     app.use(cookieParser('some-secret-value-here'));
 
     // moving the routes to routes folder
-    routes(app);
+    routes.initialize(app);
 
     // it is important static middleware is defined after router
     app.use('/public/', express.static(path.join(__dirname, '../public')));

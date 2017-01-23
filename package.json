@@ -4,7 +4,8 @@
   "description": "A study using NodeJs and Mongodb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "mocha -r tests/testHelper.js -R spec tests/**/*.test.js"
   },
   "repository": {
     "type": "git",
